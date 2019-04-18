@@ -32,7 +32,7 @@ func read(conn net.Conn) {
 	scan := bufio.NewScanner(conn)
 	for scan.Scan() {
 		ln := scan.Text()
-		if ln == ""{
+		if ln == "" {
 			fmt.Println("end of the request")
 			break
 		}

@@ -37,7 +37,7 @@ func read(conn net.Conn) {
 	var rMethod, rURI string
 	for scan.Scan() {
 		ln := scan.Text()
-		if i == 0{
+		if i == 0 {
 			xs := strings.Fields(ln)
 			rMethod = xs[0]
 			rURI = xs[1]
@@ -45,7 +45,7 @@ func read(conn net.Conn) {
 			fmt.Println("Method:", rMethod)
 			fmt.Println("URI:", rURI)
 		}
-		if ln == ""{
+		if ln == "" {
 			fmt.Println("end of the request")
 			break
 		}
@@ -56,7 +56,7 @@ func read(conn net.Conn) {
 	write(conn)
 }
 
-func write(conn net.Conn)  {
+func write(conn net.Conn) {
 	body := `<!DOCTYPE html>
 	<html lang="en">
 	<head>
@@ -68,7 +68,7 @@ func write(conn net.Conn)  {
 	</body>
 	</html>`
 
-	_, err:=io.WriteString(conn, "HTTP/1.1 200 OK\r\n")
+	_, err := io.WriteString(conn, "HTTP/1.1 200 OK\r\n")
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -76,15 +76,15 @@ func write(conn net.Conn)  {
 	if err != nil {
 		log.Fatalln(err)
 	}
-	_,err =fmt.Fprint(conn, "Content-Type: text/html\r\n")
+	_, err = fmt.Fprint(conn, "Content-Type: text/html\r\n")
 	if err != nil {
 		log.Fatalln(err)
 	}
-	_, err =io.WriteString(conn, "\r\n")
+	_, err = io.WriteString(conn, "\r\n")
 	if err != nil {
 		log.Fatalln(err)
 	}
-	_, err =io.WriteString(conn, body)
+	_, err = io.WriteString(conn, body)
 	if err != nil {
 		log.Fatalln(err)
 	}

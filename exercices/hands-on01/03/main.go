@@ -30,11 +30,11 @@ func init() {
 func main() {
 	cali := []Restaurant{
 		{
-			Name:"McDonnalds",
-			Menu:[]menu{
+			Name: "McDonnalds",
+			Menu: []menu{
 				menu{
 					Name: "Lunch",
-					Items:[]item{
+					Items: []item{
 						item{
 							Name:  "Coke",
 							Price: 2,
@@ -51,7 +51,7 @@ func main() {
 				},
 				menu{
 					Name: "Dinner",
-					Items:[]item{
+					Items: []item{
 						item{
 							Name:  "Coke",
 							Price: 2,
@@ -68,7 +68,7 @@ func main() {
 				},
 				menu{
 					Name: "Breakfast",
-					Items:[]item{
+					Items: []item{
 						item{
 							Name:  "Coke",
 							Price: 2,
@@ -86,11 +86,11 @@ func main() {
 			},
 		},
 		Restaurant{
-			Name:"BK",
-			Menu:[]menu{
+			Name: "BK",
+			Menu: []menu{
 				menu{
 					Name: "Lunch",
-					Items:[]item{
+					Items: []item{
 						item{
 							Name:  "Coke",
 							Price: 2,
@@ -107,7 +107,7 @@ func main() {
 				},
 				menu{
 					Name: "Dinner",
-					Items:[]item{
+					Items: []item{
 						item{
 							Name:  "Coke",
 							Price: 2,
@@ -124,7 +124,7 @@ func main() {
 				},
 				menu{
 					Name: "Breakfast",
-					Items:[]item{
+					Items: []item{
 						item{
 							Name:  "Coke",
 							Price: 2,
@@ -142,11 +142,11 @@ func main() {
 			},
 		},
 		Restaurant{
-			Name:"Terraco",
-			Menu:[]menu{
+			Name: "Terraco",
+			Menu: []menu{
 				menu{
 					Name: "Lunch",
-					Items:[]item{
+					Items: []item{
 						item{
 							Name:  "Coke",
 							Price: 2,
@@ -163,7 +163,7 @@ func main() {
 				},
 				menu{
 					Name: "Dinner",
-					Items:[]item{
+					Items: []item{
 						item{
 							Name:  "Coke",
 							Price: 2,
@@ -180,7 +180,7 @@ func main() {
 				},
 				menu{
 					Name: "Breakfast",
-					Items:[]item{
+					Items: []item{
 						item{
 							Name:  "Coke",
 							Price: 2,

@@ -22,8 +22,8 @@ func main() {
 	}
 }
 
-func handle(conn net.Conn){
-	_, err:=io.WriteString(conn, "I see you connected\n")
+func handle(conn net.Conn) {
+	_, err := io.WriteString(conn, "I see you connected\n")
 	if err != nil {
 		log.Fatalln(err)
 	}

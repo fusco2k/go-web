@@ -25,7 +25,7 @@ func main() {
 	}
 }
 
-func handle(con net.Conn){
+func handle(con net.Conn) {
 	defer con.Close()
 	request(con)
 	//scanner := bufio.NewScanner(con)

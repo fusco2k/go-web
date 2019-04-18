@@ -27,12 +27,12 @@ func main() {
 	if err != nil {
 		log.Fatalln(err)
 	}
-	defer  file.Close()
+	defer file.Close()
 
 	csvOut := csv.NewReader(bufio.NewReader(file))
 	output, err := csvOut.ReadAll()
 
-	for i, row := range output{
+	for i, row := range output {
 		if i == 0 {
 			continue
 		}
@@ -41,8 +41,8 @@ func main() {
 
 		record = append(record, Data{
 			Date: date,
-			Open: open,})
-		}
+			Open: open})
+	}
 
 	err = tpl.ExecuteTemplate(os.Stdout, "tpl.gohtml", record)
 

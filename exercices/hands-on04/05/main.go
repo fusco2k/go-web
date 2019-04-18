@@ -32,7 +32,7 @@ func read(conn net.Conn) {
 	scan := bufio.NewScanner(conn)
 	for scan.Scan() {
 		ln := scan.Text()
-		if ln == ""{
+		if ln == "" {
 			fmt.Println("end of the request")
 			break
 		}
@@ -42,9 +42,9 @@ func read(conn net.Conn) {
 	write(conn)
 }
 
-func write(conn net.Conn)  {
+func write(conn net.Conn) {
 	body := "Response payload"
-	_, err:=io.WriteString(conn, "HTTP/1.1 200 OK\r\n")
+	_, err := io.WriteString(conn, "HTTP/1.1 200 OK\r\n")
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -52,15 +52,15 @@ func write(conn net.Conn)  {
 	if err != nil {
 		log.Fatalln(err)
 	}
-	_,err =fmt.Fprint(conn, "Content-Type: text/plain\r\n")
+	_, err = fmt.Fprint(conn, "Content-Type: text/plain\r\n")
 	if err != nil {
 		log.Fatalln(err)
 	}
-	_, err =io.WriteString(conn, "\r\n")
+	_, err = io.WriteString(conn, "\r\n")
 	if err != nil {
 		log.Fatalln(err)
 	}
-	_, err =io.WriteString(conn, body)
+	_, err = io.WriteString(conn, body)
 	if err != nil {
 		log.Fatalln(err)
 	}

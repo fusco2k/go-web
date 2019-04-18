@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-func a(w http.ResponseWriter, r *http.Request){
+func a(w http.ResponseWriter, r *http.Request) {
 	io.WriteString(w, "Something to display")
 }
 

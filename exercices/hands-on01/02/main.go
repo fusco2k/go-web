@@ -5,6 +5,7 @@ import (
 	"os"
 	"text/template"
 )
+
 type hotel struct {
 	Name, Address, City, Zip string
 }
@@ -25,54 +26,53 @@ func init() {
 func main() {
 	cali := Regions{
 		region{
-			Region:"southern",
-			Hotels:[]hotel{
+			Region: "southern",
+			Hotels: []hotel{
 				hotel{
-					Name:"Atma",
-					Address:"Street 123",
-					City:"California",
-					Zip:"12345",
+					Name:    "Atma",
+					Address: "Street 123",
+					City:    "California",
+					Zip:     "12345",
 				},
 				hotel{
-					Name:"Bayside",
-					Address:"Street 123",
-					City:"California",
-					Zip:"12345",
+					Name:    "Bayside",
+					Address: "Street 123",
+					City:    "California",
+					Zip:     "12345",
 				},
 			},
 		},
 		region{
-			Region:"central",
-			Hotels:[]hotel{
+			Region: "central",
+			Hotels: []hotel{
 				hotel{
-					Name:"Atma",
-					Address:"Street 123",
-					City:"California",
-					Zip:"12345",
+					Name:    "Atma",
+					Address: "Street 123",
+					City:    "California",
+					Zip:     "12345",
 				},
 				hotel{
-					Name:"Bayside",
-					Address:"Street 123",
-					City:"California",
-					Zip:"12345",
+					Name:    "Bayside",
+					Address: "Street 123",
+					City:    "California",
+					Zip:     "12345",
 				},
 			},
-
 		},
 		region{
-			Region:"northern",
-			Hotels:[]hotel{
+			Region: "northern",
+			Hotels: []hotel{
 				hotel{
-					Name:"Atma",
-					Address:"Street 123",
-					City:"California",
-					Zip:"12345",
+					Name:    "Atma",
+					Address: "Street 123",
+					City:    "California",
+					Zip:     "12345",
 				},
 				hotel{
-					Name:"Bayside",
-					Address:"Street 123",
-					City:"California",
-					Zip:"12345",
+					Name:    "Bayside",
+					Address: "Street 123",
+					City:    "California",
+					Zip:     "12345",
 				},
 			},
 		},
